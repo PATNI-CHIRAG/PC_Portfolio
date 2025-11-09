@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍕 Pizza Point (Frontend)</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Link to main CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* -------------------------------
+   ✅ Project Details Page Section
+-------------------------------- */
+    .project-details {
+      padding: 2rem 9% 5rem;
+      text-align: center;
+    }
+
+    .project-title {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .project-title span {
+      color: var(--primary);
+    }
+
+    .project-description {
+      font-size: 1.6rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      line-height: 1.7;
+    }
+
+    .tech-stack {
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      margin-top: 2rem;
+      border-radius: 1rem;
+      background: rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(10px);
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    body.night .tech-stack {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Buttons */
+    .project-btn-group {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .project-btn {
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+      border-radius: 0.8rem;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .project-btn:hover {
+      transform: scale(1.05);
+    }
+
+    body.night .project-btn {
+      background: #fff;
+      color: #111;
+    }
+
+    /* ================== SLIDER ================== */
+    .slider {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem 1.2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .slider-btn:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .slider-btn.prev {
+      left: 1rem;
+    }
+
+    .slider-btn.next {
+      right: 1rem;
+    }
+
+    body.night .slider-btn {
+      color: #eee;
+    }
+
+    /* -------------------------------
+   ✅ Responsive
+-------------------------------- */
+    @media (max-width: 768px) {
+      .project-title {
+        font-size: 1.6rem;
+      }
+
+      .slider {
+        height: 160px;
+      }
+
+      .project-description {
+        font-size: 1rem;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body class="day">
+
+  <!-- ✅ Same Navbar from Index -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/pc-logo.jpg" alt="Logo" class="logo-img">
+      <span>PATNI CHIRAG</span>
+    </a>
+
+    <nav id="navbar">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#technologie-section">Skills</a>
+      <a href="index.html#projects-section" class="active">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <!-- Dark / Light Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- ================= PROJECT DETAILS SECTION ================= -->
+  <section class="project-details container" style="margin-top: 120px;">
+    <h2 class="project-title"><span>🍕 Pizza Point</span> (Frontend)</h2>
+
+    <!-- ✅ Slider -->
+    <div class="slider">
+      <div class="slides">
+        <img src="images/Pizza_point_Frontend/Pizza-Point-1.png" alt="" />
+        <img src="images/Pizza_point_Frontend/Pizza-Point-2.png" alt="" />
+        <img src="images/Pizza_point_Frontend/Pizza-Point-3.png" alt="" />
+        <img src="images/Pizza_point_Frontend/Pizza-Point-4.png" alt="" />
+        <img src="images/Pizza_point_Frontend/Pizza-Point-5.png" alt="" />
+        <img src="images/Pizza_point_Frontend/Pizza-Point-6.png" alt="" />
+        <img src="images/Pizza_point_Frontend/Pizza-Point-7.png" alt="" />
+        <img src="images/Pizza_point_Frontend/Pizza-Point-8.png" alt="" />
+      </div>
+
+      <button class="slider-btn prev">&#10094;</button>
+      <button class="slider-btn next">&#10095;</button>
+    </div>
+
+    <p class="project-description">
+      A responsive and interactive Pizza Ordering website that allows users to browse pizza menus,
+      add items to cart, place orders, and manage them easily. Includes theme toggling, modals,
+      and smooth UI interactions.
+    </p>
+
+    <div class="tech-stack">
+      <strong>Tech Used:</strong> HTML5 • CSS3 • JavaScript • Bootstrap 5 • Font Awesome •
+    </div>
+
+    <div class="project-btn-group">
+      <a href="https://github.com/PATNI-CHIRAG/PIZZA_POINT_FRONTEND" class="project-btn" target="_blank"><i
+          class="fab fa-github"></i> GitHub</a>
+      <a href="https://github.com/PATNI-CHIRAG/PIZZA_POINT_FRONTEND/blob/main/README.md#-pizza-point"
+        class="project-btn" target="_blank"><i class="fa-solid fa-play"></i> Watch Demo</a>
+    </div>
+  </section>
+
+  <!-- ✅ Script -->
+  <script>
+    // ✅ Hamburger menu open/close
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navbar");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    // ✅ Theme toggle + persists across pages
+    const toggleBtn = document.getElementById("themeToggle");
+    const body = document.body;
+    const savedTheme = localStorage.getItem("portfolioTheme");
+
+    if (savedTheme === "night") {
+      body.classList.add("night");
+      body.classList.remove("day");
+      toggleBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      const isDay = body.classList.toggle("day");
+      body.classList.toggle("night", !isDay);
+
+      if (isDay) {
+        toggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+        localStorage.setItem("portfolioTheme", "day");
+      } else {
+        toggleBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+        localStorage.setItem("portfolioTheme", "night");
+      }
+    });
+
+    window.onload = function () {
+      // ✅ Slider Logic
+      const slides = document.querySelector(".slides");
+      const next = document.querySelector(".next");
+      const prev = document.querySelector(".prev");
+
+      let index = 0;
+      const images = slides.querySelectorAll("img");
+
+      function showSlide() {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      next.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        showSlide();
+      });
+
+      prev.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        showSlide();
+      });
+
+      // ✅ Auto Slide (every 3 seconds)
+      setInterval(() => {
+        index = (index + 1) % images.length;
+        showSlide();
+      }, 3000);
+    };
+
+
+
+  </script>
+</body>
+
+</html>
