@@ -33,5 +33,4 @@ This portfolio is fully responsive and includes dark/light theme toggle, auto sl
 
 ---
 
-## 📂 Folder Structure
 
