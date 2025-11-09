@@ -7,7 +7,7 @@ This portfolio is fully responsive and includes dark/light theme toggle, auto sl
 
 ## 🔗 Live Demo  
 👉 **Live Website:** https://patni-chirag-portfolio-theta.vercel.app/  
-👉 **GitHub Repo:** _[Add your repo link here]_
+👉 **GitHub Repo:** https://github.com/PATNI-CHIRAG/PC_Portfolio
 
 ---
 
