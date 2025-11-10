@@ -82,6 +82,20 @@ const form = document.getElementById("contactForm");
   });
 
 
+  document.getElementById("download_resume").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "https://drive.google.com/uc?export=download&id=1wA5lRdGgXf3cYgfq3WcJUggtoERZEihg";
+    downloadLink.download = "Chirag_Resume.pdf";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  });
+
+
+
+
 
 
 
